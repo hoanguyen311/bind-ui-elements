@@ -1,43 +1,43 @@
 {
-    "name": "bind-ui-elements",
-    "version": "1.0.0",
-    "description": "a helper library to easy to create ui elements",
-    "repository": {
-        "url": "git@github.com:hoanguyen311/bind-ui-elements.git",
-        "type": "git"
-    },
-    "main": "index.js",
-    "scripts": {
-        "test": "karma start",
-        "test:single": "karma start --single-run --browsers PhantomJS"
-    },
-    "keywords": [
-        "jquery",
-        "helper"
-    ],
-    "author": "Hoa Nguyen Thai <thaihoa311@gmai.com>",
-    "license": "MIT",
-    "devDependencies": {
-        "chai": "^3.5.0",
-        "ghooks": "^1.2.1",
-        "karma": "^0.13.22",
-        "karma-chrome-launcher": "^1.0.1",
-        "karma-mocha": "^1.0.1",
-        "karma-mocha-reporter": "^2.0.3",
-        "karma-phantomjs-launcher": "^1.0.0",
-        "karma-sourcemap-loader": "^0.3.7",
-        "karma-webpack": "^1.7.0",
-        "mocha": "^2.5.3",
-        "phantomjs-prebuilt": "^2.1.7",
-        "webpack": "^1.13.1",
-        "webpack-dev-middleware": "^1.6.1"
-    },
-    "dependencies": {
-        "jquery": "^2.2.4"
-    },
-    "config": {
-        "ghooks": {
-            "precommit": "npm run test:single"
-        }
+  "name": "bind-ui-elements",
+  "version": "1.0.1",
+  "description": "a helper library to easy to create ui elements",
+  "repository": {
+    "url": "git@github.com:hoanguyen311/bind-ui-elements.git",
+    "type": "git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start",
+    "test:single": "karma start --single-run --browsers PhantomJS"
+  },
+  "keywords": [
+    "jquery",
+    "helper"
+  ],
+  "author": "Hoa Nguyen Thai <thaihoa311@gmai.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "ghooks": "^1.2.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-mocha": "^1.0.1",
+    "karma-mocha-reporter": "^2.0.3",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.5.3",
+    "phantomjs-prebuilt": "^2.1.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1"
+  },
+  "dependencies": {
+    "jquery": "^2.2.4"
+  },
+  "config": {
+    "ghooks": {
+      "precommit": "npm run test:single"
     }
+  }
 }
