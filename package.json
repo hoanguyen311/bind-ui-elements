@@ -2,6 +2,10 @@
     "name": "bind-ui-elements",
     "version": "1.0.0",
     "description": "a helper library to easy to create ui elements",
+    "repository": {
+        "url": "git@github.com:hoanguyen311/bind-ui-elements.git",
+        "type": "git"
+    },
     "main": "index.js",
     "scripts": {
         "test": "karma start",
