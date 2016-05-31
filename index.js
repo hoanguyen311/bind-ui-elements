@@ -8,15 +8,11 @@ module.exports = function(target) {
     var uiKey = '';
     var cfg = target.cfg;
 
-    if(!isNotFalsyAndIsOjbect(cfg)) {
-        return false;
-    }
-
-    if (!isNotFalsyAndIsOjbect(cfg.ui)) {
-        return false;
-    }
-
-    if (!isNotFalsyAndIsOjbect(cfg.$el)) {
+    if (
+        !isNotFalsyAndIsOjbect(cfg) ||
+        !isNotFalsyAndIsOjbect(cfg.ui) ||
+        !isNotFalsyAndIsOjbect(cfg.$el)
+    ) {
         return false;
     }
 
