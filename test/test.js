@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var bindUiElements = require('../index');
+var cmjBindUiElements = require('../dist');
 var $ = require('jquery');
 
 describe('bind-ui-elements', function() {
@@ -7,14 +7,14 @@ describe('bind-ui-elements', function() {
         var target = {
         };
 
-        expect(bindUiElements(target)).to.be.not.ok;
+        expect(cmjBindUiElements(target)).to.be.not.ok;
     });
     it('should fail when the target has no cfg.ui and cfg.$el property', function() {
         var target = {
             cfg: {}
         };
 
-        expect(bindUiElements(target)).to.be.not.ok;
+        expect(cmjBindUiElements(target)).to.be.not.ok;
     });
 
     it('should fail when the target\'s cfg.ui is not a object ', function() {
@@ -25,7 +25,7 @@ describe('bind-ui-elements', function() {
             $el: $(document)
         };
 
-        expect(bindUiElements(target)).to.be.not.ok;
+        expect(cmjBindUiElements(target)).to.be.not.ok;
     });
 
     it('should return the target when that target is valid', function() {
@@ -35,7 +35,7 @@ describe('bind-ui-elements', function() {
             },
             $el: $(document)
         };
-        expect(bindUiElements(target)).to.equal(target);
+        expect(cmjBindUiElements(target)).to.equal(target);
     });
 
     it('bind elements correct', function() {
@@ -49,7 +49,11 @@ describe('bind-ui-elements', function() {
             $el: $(document)
         };
 
-        bindUiElements(target);
+        cmjBindUiElements(target);
         expect(target).to.contain.all.keys([ '$child', '$child2' ]);
     });
+
+    it('should work when it be included by script tag', function() {
+        expect(window.bindUiElements).to.be.a.function;
+    })
 });

@@ -6,7 +6,8 @@ module.exports = function(config) {
     basePath: '',
     frameworks: ['mocha'],
     files: [
-      'test/*.js'
+      'test/*.js',
+      'dist/*.js'
     ],
     exclude: [
     ],
@@ -24,7 +25,7 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: [ 'PhantomJS' ],
+    browsers: [ 'PhantomJS', 'Chrome' ],
     singleRun: false,
     concurrency: Infinity
   })

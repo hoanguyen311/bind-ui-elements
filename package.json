@@ -6,10 +6,15 @@
     "url": "git@github.com:hoanguyen311/bind-ui-elements.git",
     "type": "git"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "karma start",
-    "test:single": "karma start --single-run --browsers PhantomJS"
+    "test:single": "karma start --single-run --browsers PhantomJS",
+    "build:compressed": "node_modules/.bin/webpack -p --output-filename index.min.js",
+    "build:default": "node_modules/.bin/webpack",
+    "build": "npm run build:compressed && npm run build:default",
+    "prebuild": "node_modules/.bin/rimraf dist",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "jquery",
@@ -30,6 +35,7 @@
     "karma-webpack": "^1.7.0",
     "mocha": "^2.5.3",
     "phantomjs-prebuilt": "^2.1.7",
+    "rimraf": "^2.5.2",
     "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.6.1"
   },
@@ -39,7 +45,8 @@
   "dependencies": {},
   "config": {
     "ghooks": {
-      "pre-commit": "npm run test:single"
+      "pre-commit": "npm run test:single",
+      "pre-push": "npm run build"
     }
   }
 }
