@@ -1,13 +1,11 @@
 bind-ui-elements
 ================
-[![npm](https://img.shields.io/npm/v/npm.svg?maxAge=2592000)](https://www.npmjs.com/package/bind-ui-elements)
 
 A small utility method to help bind children elements to a context. For convenience when using module pattern in jQuery
 
 ### Install
 > npm install --save bind-ui-elements
 
-> `<script src="https://npmcdn.com/bind-ui-elements@1.1.4/dist/index.js"></script>`
 
 ##OOP
 ```
