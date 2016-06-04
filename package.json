@@ -34,7 +34,7 @@
     "webpack-dev-middleware": "^1.6.1"
   },
   "peerDependencies": {
-    "jquery": "^2.2.4"
+    "jquery": "1 - 2"
   },
   "dependencies": {},
   "config": {

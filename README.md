@@ -13,7 +13,8 @@ A small utility method to help bind children elements to a context. For convenie
 import bindUiElements from 'bind-ui-elements';
 
 class Component {
-    constructor(config) {
+    constructor($el, config) {
+        this.$el = $el;
         this.cfg = Object.assign({}, Component.defaultCfg, config);
         bindUiElements(this);
         this.initalize();
