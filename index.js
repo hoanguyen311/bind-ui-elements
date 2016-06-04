@@ -11,14 +11,14 @@ module.exports = function(target) {
     if (
         !isNotFalsyAndIsOjbect(cfg) ||
         !isNotFalsyAndIsOjbect(cfg.ui) ||
-        !isNotFalsyAndIsOjbect(cfg.$el)
+        !isNotFalsyAndIsOjbect(target.$el)
     ) {
         return false;
     }
 
     for (uiKey in cfg.ui) {
         if (cfg.ui.hasOwnProperty(uiKey)) {
-            target[uiKey] = $(cfg.ui[uiKey], target.$el);
+            target[uiKey] = target.$el.find(cfg.ui[uiKey]);
         }
     }
 

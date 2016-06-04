@@ -20,9 +20,9 @@ describe('bind-ui-elements', function() {
     it('should fail when the target\'s cfg.ui is not a object ', function() {
         var target = {
             cfg: {
-                ui: 'test',
-                $el: $(document)
-            }
+                ui: 'test'
+            },
+            $el: $(document)
         };
 
         expect(bindUiElements(target)).to.be.not.ok;
@@ -31,9 +31,9 @@ describe('bind-ui-elements', function() {
     it('should return the target when that target is valid', function() {
         var target = {
             cfg: {
-                ui: {},
-                $el: $(document)
-            }
+                ui: {}
+            },
+            $el: $(document)
         };
         expect(bindUiElements(target)).to.equal(target);
     });
@@ -44,12 +44,12 @@ describe('bind-ui-elements', function() {
                 ui: {
                     '$child': '.js-child',
                     '$child2': '.js-child-2'
-                },
-                $el: $(document)
-            }
+                }
+            },
+            $el: $(document)
         };
+
         bindUiElements(target);
         expect(target).to.contain.all.keys([ '$child', '$child2' ]);
-
     });
 });

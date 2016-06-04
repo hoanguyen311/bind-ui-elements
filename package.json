@@ -20,6 +20,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "ghooks": "^1.2.1",
+    "jquery": "^2.2.4",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^1.0.1",
     "karma-mocha": "^1.0.1",
@@ -32,12 +33,13 @@
     "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.6.1"
   },
-  "dependencies": {
+  "peerDependencies": {
     "jquery": "^2.2.4"
   },
+  "dependencies": {},
   "config": {
     "ghooks": {
-      "precommit": "npm run test:single"
+      "pre-commit": "npm run test:single"
     }
   }
 }
