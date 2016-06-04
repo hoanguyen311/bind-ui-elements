@@ -1,5 +1,3 @@
-var $ = require('jquery');
-
 function isNotFalsyAndIsOjbect(obj) {
     return Boolean(obj) && obj instanceof Object;
 }
