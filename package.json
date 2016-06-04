@@ -16,6 +16,9 @@
     "prebuild": "node_modules/.bin/rimraf dist",
     "prepublish": "npm run build"
   },
+  "files": [
+    "dist/*"  
+  ],
   "keywords": [
     "jquery",
     "helper"
