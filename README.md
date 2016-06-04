@@ -5,7 +5,7 @@ A small utility method to help bind children elements to a context. For convenie
 
 ### Install
 > npm install --save bind-ui-elements
-
+> <script src="https://npmcdn.com/bind-ui-elements@1.1.4/dist/index.js"></script>
 ### Usage
 
 ##OOP
