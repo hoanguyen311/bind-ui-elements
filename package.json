@@ -1,6 +1,6 @@
 {
   "name": "bind-ui-elements",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "a helper library to easy to create ui elements",
   "repository": {
     "url": "git@github.com:hoanguyen311/bind-ui-elements.git",
