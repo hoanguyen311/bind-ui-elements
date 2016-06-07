@@ -1,6 +1,8 @@
 bind-ui-elements
 ================
 
+[![NPM](https://nodei.co/npm/bind-ui-elements.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/bind-ui-elements/)
+
 A small utility method to help bind children elements to a context. For convenience when using module pattern in jQuery
 
 ### Install
